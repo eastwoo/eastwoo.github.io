@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Welcome to myblog!"
+title:  "testing python code and markdown !"
 date:   2016-03-20 09:03:21 +0800
 ---
 
-this is just to test the * python * code
+this is just to test the *python* code
 
 `
 def Hi():
