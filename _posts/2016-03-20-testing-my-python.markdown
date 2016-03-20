@@ -8,9 +8,7 @@ this is just to test the *python* code
 
 [baidu](https:baidu.com)
 
-`
 
 	def Hi():
 	    print "hello my blog"
 
-`
