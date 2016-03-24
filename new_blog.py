@@ -11,6 +11,9 @@ blog_file = re.sub(r' ', r'-', blog_title)
 # create the time format is ['2016-03-24', '16:13:26']
 day_time = datetime.datetime.now().strftime("%F %X").split()
 Today = day_time[0]
+
+# we need setup the date to yesterday to fix the list in the eastwoo.github.io
+Yesterday = (datetime.date.today() - datetime.timedelta(days=1)).strftime('%F')
 create_time = day_time[1]
 
 # the info should be put into the blog first
@@ -19,7 +22,7 @@ layout: post
 title:  "{}"
 date:  {}
 ---
-""".format(blog_title, ' '.join(day_time))
+""".format(blog_title, Yesterday + create_time)
 
 # the blog filename
 new_blog_filename = '{}-{}.markdown'.format(Today, blog_file)
