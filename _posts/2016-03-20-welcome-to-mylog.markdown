@@ -8,8 +8,8 @@ categories: jekyll update
 # This is Liu Drew's blog
 
 ## who am I
-* I am a devops
-* python and shell coding
+1. I am a devops
+2. python and shell coding
 
 ## what's the blog for
 * recording the interesting things
