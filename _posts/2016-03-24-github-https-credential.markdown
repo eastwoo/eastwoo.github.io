@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "github https credential"
-date:   2016-03-24 16:12:22
+date:   2016-03-23 16:12:22
 ---
 
 # setup the github https credentials
