@@ -22,7 +22,7 @@ layout: post
 title:  "{}"
 date:  {}
 ---
-""".format(blog_title, Yesterday + create_time)
+""".format(blog_title, " ".join(Yesterday, create_time))
 
 # the blog filename
 new_blog_filename = '{}-{}.markdown'.format(Today, blog_file)
