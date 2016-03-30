@@ -22,10 +22,10 @@ layout: post
 title:  "{}"
 date:  {}
 ---
-""".format(blog_title, " ".join(Yesterday, create_time))
+""".format(blog_title, Yesterday + " " +  create_time)
 
 # the blog filename
-new_blog_filename = '{}-{}.markdown'.format(Today, blog_file)
+new_blog_filename = '{0}-{1}.markdown'.format(Today, blog_file)
 
 def init_blog(filename, content):
     os.chdir('_posts')
