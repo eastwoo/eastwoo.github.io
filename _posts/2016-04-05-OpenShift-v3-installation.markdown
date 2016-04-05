@@ -10,8 +10,7 @@ date:  2016-04-04 15:13:19
 
 * wildcard dns resolution
 
-    hostname -f
-
+        hostname -f
         host $(hostname -f)
 
 * static ip address
