@@ -10,8 +10,8 @@ date:  2016-04-04 15:13:19
 
 * wildcard dns resolution
 
-    hostname -f
-    host $(hostname -f)
+        hostname -f
+        host $(hostname -f)
 
 * static ip address
 
@@ -27,11 +27,15 @@ date:  2016-04-04 15:13:19
 
 * stop and disable NetworkManager
 	
-        systemctl stop NetworkManager; systemctl disable NetworkManager; systemctl is-enabled NetworkManager
+        systemctl stop NetworkManager 
+        systemctl disable NetworkManager
+        systemctl is-enabled NetworkManager
 
 * stop and disable firewalld
 
-        systemctl stop firewalld; systemctl disable firewalld; systemctl is-enabled firewalld
+        systemctl stop firewalld
+        systemctl disable firewalld
+        systemctl is-enabled firewalld
 
 * install docker
 
