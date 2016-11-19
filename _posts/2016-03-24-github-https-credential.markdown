@@ -4,6 +4,7 @@ title:  "github https credential"
 date:   2016-03-23 16:12:22
 category: worknote
 ---
+
 # setup the github https credentials
 
 ## you just need to execute two commands to finish  this task
