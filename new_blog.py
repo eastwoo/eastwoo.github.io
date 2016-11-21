@@ -5,6 +5,9 @@ import re
 import os
 
 # define the blog title is sys.argv[1]
+if len(sys.argv) == 1:
+    print 'Usage: ./$script_name new_blog_name'
+    sys.exit()
 blog_title = sys.argv[1]
 blog_file = re.sub(r' ', r'-', blog_title)
 
