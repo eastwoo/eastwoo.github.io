@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "chapter8"
+date:  2016-11-27 22:31:27
+---
+
+# Creating and mounting file systems
+
+## Section 1
+### know the file function /etc/fstab
+### know the command mount umount blkid lsof
+
+ 
