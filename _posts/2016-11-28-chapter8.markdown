@@ -12,6 +12,36 @@ date:  2016-11-27 22:31:27
 
 * 文件 /etc/fstab 配置之后当系统启动之后，写在此文件中的磁盘分区会开机自动挂载
 
+    [root@dhcp-136-234 ~]# cat /etc/fstab 
+    
+    #
+    # /etc/fstab
+    # Created by anaconda on Wed Aug  3 12:48:15 2016
+    #
+    # Accessible filesystems, by reference, are maintained under '/dev/disk'
+    # See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+    # 分区                   挂载点                 文件系统类型 挂载选项
+    /dev/mapper/fedora-root /                       ext4    defaults        1 1
+    UUID=54d2d1cf-a3b8-4063-9e7d-29022a116152 /boot ext4    defaults        1 2
+    /dev/mapper/fedora-home /home                   ext4    defaults        1 2
+    /dev/mapper/fedora-swap swap                    swap    defaults        0 0
+    [root@dhcp-136-234 ~]# 
+
 ### know the command mount umount blkid lsof
 
+#### command example
 
+    mount /dev/vdb1 /mnt/mydata
+    mount UUID=54d2d1cf-a3b8-4063-9e7d-29022a116152 /boot
+    umount /dev/vdb1 or umount /mnt/mydata
+    [root@dhcp-136-234 ~]# blkid 
+    /dev/sda2: UUID="16B686D9B686B92F" TYPE="ntfs" PARTUUID="9048623b-02"
+    /dev/sda3: UUID="DEB6A07CB6A056B5" TYPE="ntfs" PARTUUID="9048623b-03"
+    /dev/sda5: UUID="54d2d1cf-a3b8-4063-9e7d-29022a116152" TYPE="ext4" PARTUUID="9048623b-05"
+    /dev/sda6: UUID="f8iFfS-o8XP-rN1L-51H1-MQA5-sUZZ-ZLMqIJ" TYPE="LVM2_member" PARTUUID="9048623b-06"
+    /dev/mapper/fedora-root: UUID="b634f7a2-6eaf-403a-a738-a9f4bd2b0253" TYPE="ext4"
+    /dev/mapper/fedora-swap: UUID="3ab07e13-4ddf-4d52-beba-ed2395d062ef" TYPE="swap"
+    /dev/mapper/fedora-home: UUID="89a9cedb-44a1-43f8-ae04-7b1b18dc77dd" TYPE="ext4"
+    [root@dhcp-136-234 ~]# 
+    
+    lsof is used to list open files, 直接跟目录名，可以看出来当前哪些进程在调用这个目录
