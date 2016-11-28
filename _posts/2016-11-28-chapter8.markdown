@@ -10,6 +10,8 @@ date:  2016-11-27 22:31:27
 
 ### know the file function /etc/fstab
 
+* 文件 /etc/fstab 配置之后当系统启动之后，写在此文件中的磁盘分区会开机自动挂载
+
 ### know the command mount umount blkid lsof
 
- 
+
