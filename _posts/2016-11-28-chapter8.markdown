@@ -38,7 +38,31 @@ date:  2016-11-27 22:31:27
 * fdisk is used to create the disk partion
 * mkfs is used to format the filesystem type
 * partprobe: after create the disk partion, it will let the kernel know the changes
+* persistent mounts means after the system reboot, the disk partion still can be
+mounted
 
 ##### command example
     fdisk /dev/vdb
     partprobe /dev/vdb
+
+### section 3
+
+#### create the swap space
+
+* use fdisk 
+
+    fdisk /dev/vdb
+    n
+    p
+    1
+    +256M
+    t
+    82
+    w
+
+* the new created disk partion name is /dev/vdb1
+    mkswap /dev/vdb1
+    free
+    swapon /dev/vdb1
+* use the free command again to ensure that swap changed
+* edit /etc/fstab make sure that after rebooting the swap works
