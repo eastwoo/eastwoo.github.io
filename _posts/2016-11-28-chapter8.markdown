@@ -6,15 +6,15 @@ date:  2016-11-27 22:31:27
 
 ## Creating and mounting file systems
 
-# Section 1
+### Section 1
 
-### know the file function /etc/fstab
+#### know the file function /etc/fstab
 
 * 文件 /etc/fstab 配置之后当系统启动之后，写在此文件中的磁盘分区会开机自动挂载
 
-### know the command mount umount blkid lsof
+#### know the command mount umount blkid lsof
 
-#### command example
+##### command example
 
     mount /dev/vdb1 /mnt/mydata
     mount UUID=54d2d1cf-a3b8-4063-9e7d-29022a116152 /boot
@@ -30,3 +30,15 @@ date:  2016-11-27 22:31:27
     [root@dhcp-136-234 ~]# 
     
     lsof is used to list open files, 直接跟目录名，可以看出来当前哪些进程在调用这个目录
+
+### Section 2
+
+#### use the command fdisk gdisk(gpt just know is enough) partprobe
+
+* fdisk is used to create the disk partion
+* mkfs is used to format the filesystem type
+* partprobe: after create the disk partion, it will let the kernel know the changes
+
+##### command example
+    fdisk /dev/vdb
+    partprobe /dev/vdb
