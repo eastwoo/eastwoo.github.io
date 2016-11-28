@@ -13,14 +13,7 @@ date:  2016-11-27 22:31:27
 * 文件 /etc/fstab 配置之后当系统启动之后，写在此文件中的磁盘分区会开机自动挂载
 
     [root@dhcp-136-234 ~]# cat /etc/fstab 
-    
-    #
-    # /etc/fstab
-    # Created by anaconda on Wed Aug  3 12:48:15 2016
-    #
-    # Accessible filesystems, by reference, are maintained under '/dev/disk'
-    # See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
-    # 分区                   挂载点                 文件系统类型 挂载选项
+    分区                   挂载点                 文件系统类型 挂载选项
     /dev/mapper/fedora-root /                       ext4    defaults        1 1
     UUID=54d2d1cf-a3b8-4063-9e7d-29022a116152 /boot ext4    defaults        1 2
     /dev/mapper/fedora-home /home                   ext4    defaults        1 2
