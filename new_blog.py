@@ -36,9 +36,5 @@ def init_blog(filename, content):
     fobj.write(content)
     fobj.close()
 
-
-def main():
-    init_blog(new_blog_filename, init_info)
-
 if __name__ == '__main__':
-    main()
+    init_blog(new_blog_filename, init_info)
